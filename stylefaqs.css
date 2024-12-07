@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 80px;  /* Adjusted padding to ensure content is below navbar */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    min-height: 100vh;  /* Ensure the body takes the full viewport height */
+}
+
+/* Logo Section */
+#logo-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#header-logo .logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+.nav-tabs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* FAQ Container */
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 100px;  /* To account for the sticky navbar */
+    background-color: #F3CFC6;  /* Set the background color of the FAQ container */
+}
+
+/* Left Side (Image) */
+.faq-image {
+    width: 50%;  /* Set to 50% */
+}
+
+.faq-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Right Side (FAQ Box) */
+.faq {
+    width: 50%;  /* Set to 50% */
+    padding: 20px;
+    background-color: white;  /* Set the background color of the FAQ box to white */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-box-container h3 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.faq-box-container p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/* Content for the bottom container of faq page*/
+.bottom-container {
+    width: 100%;  /* Ensures it takes full width */
+    padding: 20px;  /* Adds some space inside the container */
+    display: flex;  /* Using flexbox layout */
+    justify-content: flex-start;  /* Aligns items to the left */
+    background-color: #F3CFC6;  /* Optional: background color for the bottom section */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);  /* Optional: shadow effect */
+	flex-direction: column;
+}
+
+/* Help section styles */
+.help-section {
+    display: flex;
+    flex-direction: column;  /* Stacks the elements vertically */
+    align-items: flex-start;  /* Aligns content to the left */
+	font-family: Garamond;
+
+}
+
+.help-section h3 {
+    margin-bottom: 10px;  /* Adds space between the heading and the list */
+}
+
+.tabs {
+    list-style-type: none;  /* Removes default list styling */
+    padding: 0px;
+    margin: 0px;
+}
+
+.tabs li {
+    margin-bottom: 10px;  /* Adds space between the list items */
+}
+
+.tab-link {
+    text-decoration: none;  /* Removes underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    color: #ccc;  /* Changes color on hover */
+}
+
+/* Style for the new "House of CB" section */
+.house-of-cb-section {
+    display: flex;
+    flex-direction: column;  /* Ensures the content is stacked vertically */
+    align-items: flex-start;  /* Aligns content to the left, same as .help-section */
+    font-family: Garamond;
+    margin-top: 0px;  /* Increased space above this section for more distance */
+}
+
+.house-of-cb-section h3 {
+    margin-bottom: 10px;  /* Space between the heading and the list */
+}
+
+.house-of-cb-section .tabs {
+    list-style-type: none;  /* Ensures list items are styled correctly */
+    padding: 0px;
+    margin: 0px;
+}
+
+.house-of-cb-section .tabs li {
+    margin-bottom: 10px;  /* Same spacing between items as in help section */
+}
+
+.house-of-cb-section .tab-link {
+    text-decoration: none;  /* No underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.house-of-cb-section .tab-link:hover {
+    color: #ccc;  /* Hover color for the link */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+     .bottom-container {
+        flex-direction: column;
+        gap: 0;  /* Remove any space between columns in the mobile view */
+		padding: 5px 10px;
+    }
+
+    .help-section,
+    .house-of-cb-section {
+        width: 100%;
+        margin-top: 0;  /* Remove any top margin to reduce space */
+	padding: 5px 0;
+    }
+}

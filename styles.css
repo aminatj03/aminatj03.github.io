@@ -1,0 +1,602 @@
+/* Styling for the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.menu-container {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.menu li {
+    position: relative;
+}
+
+.dropbtn {
+    font-family: Garamond;
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-family: Garamond;
+    display: none;
+    position: absolute;
+    background-color: #F3CFC6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
+
+
+/* CSS specific to the New Arrivals page */
+body.new-arrivals #header-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+body.new-arrivals {
+    background-color: #F3CFC6;
+}
+
+#header-logo .logo {
+    width: 200px;
+    height: auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+
+#header-logo img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 150px;
+}
+
+/* Apply Garamond font to all text within the item container */
+.item {
+    font-family: Garamond, serif;
+}
+
+/* Styling for the product name */
+.item-name {
+    font-family: Garamond, serif; /* Garamond font for the item name */
+    font-size: 24px; /* Adjust size to your preference */
+    font-weight: normal; /* Regular weight for the product name */
+}
+
+/* Styling for the product description */
+.item-description {
+    font-family: Garamond, serif; /* Garamond font for the item description */
+    font-style: italic; /* Italic style for the description */
+    font-size: 16px; /* Adjust size for the description */
+}
+
+/* Styling for the product price */
+.product-price {
+    font-family: Garamond, serif; /* Garamond font for the item price */
+    font-size: 18px; /* Adjust size for the price */
+    font-weight: bold; /* Bold the price to make it stand out */
+}
+
+/* Black Band Styling */
+.nav-tabs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-family: Garamond;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+#new-arrivals-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin-top: 120px; /* Adjust this if the menu bar overlaps */
+}
+
+.item h2{ /* Setting the class product font-size to 20px and margin to 10x */
+    font-size: 20px;
+    margin: 10x;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.item img {
+    max-width: 100%; 
+    height: auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #new-arrivals-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #new-arrivals-content {
+        grid-template-columns: 1fr; /* 1 item per row on smaller screens */
+    }
+}
+
+
+/* Content for the bottom container of index page*/
+.bottom-container {
+    width: 100%;  /* Ensures it takes full width */
+    padding: 20px;  /* Adds some space inside the container */
+    display: flex;  /* Using flexbox layout */
+    justify-content: flex-start;  /* Aligns items to the left */
+    background-color: #F3CFC6;  /* Optional: background color for the bottom section */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);  /* Optional: shadow effect */
+	flex-direction: column;
+}
+
+/* Help section styles */
+.help-section {
+    display: flex;
+    flex-direction: column;  /* Stacks the elements vertically */
+    align-items: flex-start;  /* Aligns content to the left */
+	font-family: Garamond;
+}
+
+.help-section h3 {
+    margin-bottom: 10px;  /* Adds space between the heading and the list */
+}
+
+.tabs {
+    list-style-type: none;  /* Removes default list styling */
+    padding: 0px;
+    margin: 0px;
+}
+
+.tabs li {
+    margin-bottom: 10px;  /* Adds space between the list items */
+}
+
+.tab-link {
+    text-decoration: none;  /* Removes underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    color: #ccc;  /* Changes color on hover */
+}
+
+/* Style for the new "House of CB" section */
+.house-of-cb-section {
+    display: flex;
+    flex-direction: column;  /* Ensures the content is stacked vertically */
+    align-items: flex-start;  /* Aligns content to the left, same as .help-section */
+    font-family: Garamond;
+    margin-top: 0px;  /* Increased space above this section for more distance */
+}
+
+.house-of-cb-section h3 {
+    margin-bottom: 10px;  /* Space between the heading and the list */
+}
+
+.house-of-cb-section .tabs {
+    list-style-type: none;  /* Ensures list items are styled correctly */
+    padding: 0px;
+    margin: 0px;
+}
+
+.house-of-cb-section .tabs li {
+    margin-bottom: 10px;  /* Same spacing between items as in help section */
+}
+
+.house-of-cb-section .tab-link {
+    text-decoration: none;  /* No underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.house-of-cb-section .tab-link:hover {
+    color: #ccc;  /* Hover color for the link */
+}
+
+
+/* Styling for Contact Us Page */
+.contact-us-container {
+    display: flex;
+    justify-content: space-between; /* Spaces out the image and form */
+    align-items: center; /* Vertically center the content */
+    padding: 20px 20px 40px;
+    gap: 20px; /* Space between the image and form */
+	margin-top: 0;
+}
+
+.contact-image {
+    flex: 1;
+    max-width: 50%; /* Image takes up 50% of the width */
+}
+
+.contact-image img {
+    width: 100%; /* Make sure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 50%; /* Form takes up 50% of the width */
+    background-color: #F3CFC6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better design */
+}
+
+.contact-form h2 {
+	font-family: Garamond;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+	font-family: Garamond;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+	font-family: Garamond;
+    font-size: 16px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Logo Section */
+#contact-header {
+    text-align: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#contact-header-logo .logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-us-container {
+        flex-direction: column; /* Stack the image and form vertically on smaller screens */
+        gap: 40px;
+    }
+
+    .contact-image, .contact-form {
+        max-width: 100%; /* Allow each section to take up full width */
+    }
+}
+
+/* CSS specific to the Dresses page */
+body.dresses #header-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+body.dresses {
+    background-color: #F3CFC6;
+}
+
+#header-logo .logo {
+    width: 200px;
+    height: auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+
+#header-logo img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 150px;
+}
+
+#dresses-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin-top: 120px; /* Adjust this if the menu bar overlaps */
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #dresses-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #dresses-content {
+        grid-template-columns: 1fr; /* 1 item per row on smaller screens */
+    }
+}
+
+
+/* CSS specific to the Basics page */
+body.basics #header-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+body.basics {
+    background-color: #F3CFC6;
+}
+
+#header-logo .logo {
+    width: 200px;
+    height: auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    width: 100%;
+    position: relative;
+}
+
+#header-logo img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 150px;
+}
+
+#basics-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin-top: 120px; /* Adjust this if the menu bar overlaps */
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #basics-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium-sized screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #basics-content {
+        grid-template-columns: 1fr; /* 1 item per row on smaller screens */
+    }
+}
+
+body.basics #header-logo {
+    position: fixed;  /* Fix the logo to the top-left of the screen */
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure the logo is above other elements */
+}
+
+
+/* Styling for the About Us page (Override styles for menu and iframe) */
+body.about-us .menu-container {
+    background-color: white; /* Set the background color of the menu bar to white for About Us page */
+    box-shadow: none; /* Remove box shadow for a cleaner look */
+	display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the items vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; 
+}
+
+body.about-us .nav-links {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    justify-content: center; /* Center the menu items */
+    padding: 0;
+    margin: 0;
+}
+
+body.about-us .nav-links li {
+    margin: 0 15px; /* Keep space between items */
+}
+
+body.about-us .nav-links a {
+    font-family: Garamond;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+	padding: 16px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+body.about-us .nav-links a:hover {
+    color: #888; /* Lighter color when hovered */
+}
+
+body.about-us #header-logo {
+    position: absolute; /* Position the logo in the header */
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+body.about-us #header-logo img {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+}
+
+/* Styling for the image on the About Us page */
+body.about-us .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+body.about-us .about-image {
+    width: 100%; /* Ensure the container takes up full width */
+    max-width: 1200px; /* Limit the width if needed (you can adjust the pixel value) */
+    height: auto; /* Keeps aspect ratio intact */
+    overflow: hidden; /* Ensures no image gets cut off */
+    display: flex;
+    justify-content: center; /* Centers image inside the container */
+	margin-top: 50px;
+}
+
+body.about-us .about-image img {
+    width: 100%; /* Make the image responsive and fit within the container */
+    max-width: 100%; /* Prevents stretching beyond natural size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevents image from being stretched or distorted */
+}
+
+/* Responsive image adjustments */
+@media (max-width: 768px) {
+    body.about-us .about-image img {
+        width: 100%; /* Scales image to fit on small screens */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body.about-us .about-image img {
+        width: 100%; /* Ensures the image fully adapts to small screens */
+        height: auto;
+    }
+}

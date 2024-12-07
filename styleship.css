@@ -1,0 +1,305 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 100px;  /* Adds padding to avoid collision with navbar */
+}
+
+/* Logo Section */
+#logo-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+#header-logo .logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Bar */
+.nav-tabs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Padding to ensure navbar has space */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-family: Garamond, serif;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Main Content Section */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 150px; /* Ensure content doesn't collide with navbar */
+    width: 100%;  /* Ensure the container takes the full width */
+}
+
+/* Left-side Image */
+.shipping-image {
+    width: 50%;          /* Ensure it takes up 50% of the container */
+    height: auto;        /* Keep aspect ratio */
+    margin-right: 20px;  /* Adds margin between the image and content */
+}
+
+.shipping-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Shipping Info Container */
+.shipping-info-container {
+    flex: 1;  /* This ensures it takes up the remaining 50% */
+    background-color: #F3CFC6;
+    padding: 30px 20px;
+    overflow-y: auto; /* Allows scrolling of content */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 100vh; /* Limits the content height to the screen height */
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Styling for dropdown containers */
+.dropdowns {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for each dropdown (details) */
+details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the summary text */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+/* Hover effect for summary */
+summary:hover {
+    background-color: #e7e7e7;
+}
+
+/* Style for the content inside details */
+details p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Optional: Add more space when the details are expanded */
+details[open] {
+    margin-bottom: 20px;
+}
+
+/* Style for headers inside the details element */
+details h3 {
+    font-weight: bold;  /* Bold only the header */
+}
+
+/* Style for paragraphs inside the details element */
+details p {
+    font-weight: normal;  /* Ensure paragraphs are not bold */
+}
+
+/* For responsive design, you may want to stack elements vertically on smaller screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 200px;  /* Adjust margin for small screens */
+        padding-left: 0;
+    }
+
+    .shipping-image, .shipping-info-container {
+        flex: 1 1 100%;
+        padding: 20px;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+/* Styling the content for the bottom container of index page*/
+.bottom-container {
+    width: 100%;  /* Ensures it takes full width */
+    padding: 20px;  /* Adds some space inside the container */
+    display: flex;  /* Using flexbox layout */
+    justify-content: flex-start;  /* Aligns items to the left */
+    background-color: #F3CFC6;  /* Optional: background color for the bottom section */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);  /* Optional: shadow effect */
+}
+
+/* Help section styles */
+.help-section {
+    display: flex;
+    flex-direction: column;  /* Stacks the elements vertically */
+    align-items: flex-start;  /* Aligns content to the left */
+	font-family: Garamond
+}
+
+.help-section h3 {
+    margin-bottom: 10px;  /* Adds space between the heading and the list */
+}
+
+.tabs {
+    list-style-type: none;  /* Removes default list styling */
+    padding: 0px;
+    margin: 0px;
+}
+
+.tabs li {
+    margin-bottom: 10px;  /* Adds space between the list items */
+}
+
+.tab-link {
+    text-decoration: none;  /* Removes underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tab-link:hover {
+    color: #ccc;  /* Changes color on hover */
+}
+
+/* Style for the new "House of CB" section */
+.house-of-cb-section {
+    display: flex;
+    flex-direction: column;  /* Ensures the content is stacked vertically */
+    align-items: flex-start;  /* Aligns content to the left, same as .help-section */
+    font-family: Garamond;
+    margin-top: 0px;  /* Increased space above this section for more distance */
+}
+
+.house-of-cb-section h3 {
+    margin-bottom: 10px;  /* Space between the heading and the list */
+}
+
+.house-of-cb-section .tabs {
+    list-style-type: none;  /* Ensures list items are styled correctly */
+    padding: 0px;
+    margin: 0px;
+}
+
+.house-of-cb-section .tabs li {
+    margin-bottom: 10px;  /* Same spacing between items as in help section */
+}
+
+.house-of-cb-section .tab-link {
+    text-decoration: none;  /* No underline */
+    color: black;  /* Link color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.house-of-cb-section .tab-link:hover {
+    color: #ccc;  /* Hover color for the link */
+}
+
+
+/* Main Content Section */
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 150px; /* Ensure content doesn't collide with navbar */
+    width: 100%;  /* Ensure the container takes the full width */
+}
+
+/* FAQ box with background color #F3CFC6 */
+.faq {
+    background-color: #F3CFC6;
+    padding: 40px 20px;
+    text-align: center;
+	 overflow-y: auto; /* Allows scrolling of content */
+}
+
+/* FAQ Box with white background */
+.faq-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;  /* You can adjust this width */
+    margin: 0 auto;  /* Centers the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Left-side Image */
+.faq-image {
+    width: 50%;          /* Ensure it takes up 50% of the container */
+    height: auto;        /* Keep aspect ratio */
+    margin-right: 20px;  /* Adds margin between the image and content */
+}
+
+.faq-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Shipping Info Container */
+.faq-container {
+    flex: 1;  /* This ensures it takes up the remaining 50% */
+    background-color: #F3CFC6;
+    padding: 30px 20px;
+    overflow-y: auto; /* Allows scrolling of content */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 100vh; /* Limits the content height to the screen height */
+}
+
